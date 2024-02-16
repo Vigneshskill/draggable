@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(83, 83, 83) , yellow);
+    overflow: hidden;
+}
+.para {
+font-size: 50px;
+font-weight: 900;
+color: #ffffff;
+text-shadow: 6px 8px 10px rgb(0, 0, 0);
+ font-family: 'Times New Roman', Times, serif;
+ float: right;
+ margin-top: 21rem;
+ width: 500px;
+ text-align: center;
+ margin-right: 5rem;
+}
+nav{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 80px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+nav .content{
+    display: flex;
+    margin-top: 25rem;
+    margin-right: 90rem;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-45deg);
+}
+.content .btn,
+.content span a{
+    height: 60px;
+    width: 60px;
+    background: #e2ff03;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.content .btn{
+    font-size: 35px;
+    color: #020202;
+    z-index: 100;
+    cursor: pointer;
+    transform: rotate(-225deg);
+    transition: all 0.6s ease;
+}
+nav.open .btn{
+    transform: rotate(0deg);
+}
+.content span{
+    position: absolute;
+    transition: all 0.6s ease;
+    opacity: 0;
+    
+}
+nav.open .content span{
+    transform: rotate(calc(var(--i) * (360deg/8))) translateY(120px);
+    opacity: 1;
+  }
+.content span a{
+    text-decoration: none;
+    transform: rotate(45deg);
+}
+.content span a i{
+    font-size: 24px;
+    color: #0e2431;
+    transform: rotate(calc(var(--i) * (360deg/ -8)));
+    opacity: 0.8;
+    transition: 0.2s;
+}
+ 
+  
